@@ -1,0 +1,36 @@
+.banner {
+    background-image: url('../img/tour.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner__content {
+    text-align: center;
+    color: #0b0b0b;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  .banner__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .banner__description {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .banner__button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  .banner__button:hover {
+    background-color: #0056b3;
+  }

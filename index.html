@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Путешествуй по России</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/constructor.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fc2ca79a-00cb-4d95-bceb-19568901bfe2&lang=ru_RU" type="text/javascript"></script>
+  <script src="js/header.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">Тур по стране</div>
+        <div class="header__nav">
+          <button class="header__nav-toggle">Меню</button>
+          <ul class="header__nav-list">
+            <li><a href="#banner">Готовые туры</a></li>
+            <li><a href="#constructor">Конструктор</a></li>
+            <li><a href="#feedback">Связаться с нами</a></li>
+            <li><a href="#payment">Оформить заказ</a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="banner">
+        <div class="banner__content">
+          <h1 class="banner__title">Создайте свое незабываемое путешествие по России</h1>
+          <p class="banner__description"></p>
+          <a href="#constructor" class="banner__button">Старт</a>
+        </div>
+        <div class="banner__image">
+          <!-- Здесь будет размещено изображение баннера -->
+        </div>
+      </section>
+      <section class="constructor">
+        <h2 class="constructor__title">Построить маршрут путешествия</h2>
+        <form class="constructor__form">
+          <div class="constructor__region">
+            <label for="region">Выберите регион:</label>
+            <div class="constructor__region-wrapper">
+              <ul class="constructor__region-list"></ul>
+            </div>
+          </div>
+          <div class="constructor__city">
+            <label for="city">Выберите город:</label>
+            <div class="constructor__city-wrapper">
+              <ul class="constructor__city-list"></ul>
+            </div>
+          </div>
+          <div class="constructor__attractions">
+            <label for="attractions">Выберите достопримечательности:</label>
+            <div class="constructor__attractions-wrapper">
+              <ul class="constructor__attractions-list"></ul>
+            </div>
+          </div>
+          <div class="constructor__transport">
+            <label for="transport">Выберите транспорт:</label>
+            <div class="constructor__transport-wrapper">
+              <input type="radio" id="transport-car" name="transport" value="car">
+              <label for="transport-car">Автомобиль</label>
+              <input type="radio" id="transport-car" name="transport" value="fly">
+              <label for="transport-car">Самолет</label>
+              <input type="radio" id="transport-car" name="transport" value="jd">
+              <label for="transport-car">Железнодорожный транспорт</label>
+              <input type="radio" id="transport-other" name="transport" value="other">
+              <label for="transport-other">Другое</label>
+            </div>
+            <select id="transport-other-select" name="transport-other">
+              <!-- Варианты другого транспорта -->
+            </select>
+          </div>
+          <button type="submit" class="constructor__submit">Построить маршрут</button>
+        </form>
+        <div class="constructor__result">
+          <h3>Ваш маршрут:</h3>
+          <div class="constructor__result-regions"></div>
+          <div class="constructor__result-cities"></div>
+          <div class="constructor__result-attractions"></div>
+          <div class="constructor__result-transport"></div>
+          <div class="constructor__result-map"></div>
+        </div>
+      </section>
+      <section class="feedback">
+        <h2 class="feedback__title">Связаться с нами</h2>
+        <form class="feedback__form">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+          <button type="submit" class="feedback__submit">Отправить</button>
+        </form>
+      </section>
+      <section class="payment">
+        <h2 class="payment__title">Оформить заказ</h2>
+        <form class="payment__form">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="text" name="surname" placeholder="Фамилия" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Телефон" required>
+          <button type="submit" class="payment__submit">Оплатить</button>
+        </form>
+      </section>
+      <footer class="footer">
+        <div class="footer__info">
+          <p>Компания "Тур по стране"</p>
+          <p>Адрес: г. Москва, ул. Малая Бронная, д. 51</p>
+          <p>Телефон: +7 (976) 124-22-12</p>
+          <p>Email: travel@russia.ru</p>
+          <p>Разработчик: Климков В.А.</p>
+        </div>
+      </footer>
+  <script src="js/constructor.js"></script>
+</body>
+</html>
